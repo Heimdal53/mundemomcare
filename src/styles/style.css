@@ -1,0 +1,326 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4b2c5e, #6a1b9a);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    color: #4b2c5e;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #4b2c5e;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    background: #6a1b9a;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Hero Section with Parallax Effect */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: #6a1b9a;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #8e24aa;
+    transform: scale(1.1);
+}
+
+/* Duyuru Kısmı */
+#mavor-ai-announcement {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.announcement-box {
+    background-color: #6a1b9a;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.announcement-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.announcement-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.announcement-box a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.announcement-box a:hover {
+    background-color: #d81b60;
+}
+
+/* Hizmetler ve Projeler */
+.content-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.services-container, .projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-card, .project-card {
+    background: #fff;
+    color: #4b2c5e;
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover, .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+    transform: scale(1.1);
+}
+
+/* İletişim Bilgileri Alanı */
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Dikey hizalama */
+    align-items: center;
+    gap: 30px; /* Kutular arasındaki boşluk */
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* İletişim Kutuları */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    color: #4b2c5e;
+    padding: 30px 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+    background-color: #f4ebff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item span {
+    font-size: 3rem;
+    color: #6a1b9a;
+}
+
+.contact-item div {
+    text-align: left;
+    flex: 1;
+}
+
+.contact-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-link {
+    color: #6a1b9a;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #8e24aa;
+}
+
+/* Mail Kutusu */
+.contact-mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 40px;
+    background: #ffffff;
+    color: #4b2c5e;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-mail:hover {
+    transform: scale(1.05);
+    background-color: #f4ebff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-mail label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-mail input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.contact-mail button {
+    background: #6a1b9a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-mail button:hover {
+    background: #8e24aa;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #3d1159;
+    width: 100%;
+    padding: 30px 0;
+    color: #fff;
+    text-align: center;
+}
+
+footer .social-icons a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #6a1b9a;
+}
+
+footer .footer-nav a {
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer .footer-nav a:hover {
+    color: #6a1b9a;
+}
